@@ -312,6 +312,69 @@ Remark
  - “__device__” functions in CUDA
  - force-inlined
 
+## 提高代码质量
+
+Reusability、Extensibility、Maintainability
+
+### 元编程(metaprogramming)
+
+```python
+@ti.kernel
+def copy_4(src:ti.template(), dst:ti.template()):
+    for i in range(4):
+        dst[i] = src[i]
+a = ti.field(ti.f32, 4)
+b = ti.field(ti.f32, 4)
+c = ti.field(ti.f32, 12)
+d = ti.field(ti.f32, 12)
+
+copy(a, b, 4)
+copy(c, d, 12)
+```
+
+使用ti.template()传递参数，
+
+- 允许你传递任何taichi支持的东西：
+  - 基础的taichi类型ti.f32、ti.i32、ti.f64 ...
+  - 复合的taichi类型ti.Vector(),ti.Matrix()
+  - taichi field: ti.field(), ti.Vector.field(), ti.Matrix.field(), ti.Struct.field()
+  - Taichi classes:@ti.data_oriented
+- Pass-by-reference, use with cautions
+  - Computations in the Taichi scope can NOT modify Python scope data
+  - Computations in the Taichi scope can modify Taichi fields
+  - Computations in the Taichi scope can modify Taichi scope 
+
+Copy a Taichi field to another
+
+Metadata描述数据的数据
+
+- Field:
+  - field.dtype:type of a field
+  - field.shape:shape of a field
+- Matrix/Vector
+  - matrix.n:rows of a mat
+  - maxtrix.m:cols of a mat/vec
+
+Use ti.template() with caution
+
+Taichi kernels are instantiated whenever seeing a new parameter(even same typed)
+
+Metaprogramming in Taichi
+
+Unify the development of dimensionality-dependent code, such as 2D/3D physical simulations
+
+Improve run-time performance by taking run-time costs to compile time
+
+ti.static()
+
+Compile-time branching
+
+### 面向对象编程(Object-oriented programming)
+
+Python OOP + Taichi DOP = ODOP
+ Objective data-oriented programming(ODOP)
+
+
 ## 大规模计算的关键-高级数据结构
 
 Taichi 是一个面向数据的编程语言
