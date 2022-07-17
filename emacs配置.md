@@ -2,7 +2,7 @@
 
 ## Linux Mac
 
-°²×°Íêemacsºó
+å®‰è£…å®Œemacså
 
 ```shell
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
@@ -23,7 +23,7 @@ pyenv global 3.7.9
 
 ## Windows
 
-°²×°ÍêemacsºóÉèÖÃ»·¾³±äÁ¿¡£
+å®‰è£…å®Œemacsåè®¾ç½®ç¯å¢ƒå˜é‡ã€‚
 
 ```dos
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
@@ -34,8 +34,8 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 mklink /j "C:\Users\USER\.emacs.d" "C:\Users\USER\AppData\Roaming\.emacs.d"
 ```
 
-°²×°Í¼±ê
-ÔÚEmacsÖĞ°²×°×ÖÌå£¬¼üÈëM-x£¨Alt + x£©£¬²¢Ğ´ÈçÏÂ£º
+å®‰è£…å›¾æ ‡
+åœ¨Emacsä¸­å®‰è£…å­—ä½“ï¼Œé”®å…¥M-xï¼ˆAlt + xï¼‰ï¼Œå¹¶å†™å¦‚ä¸‹ï¼š
 
 ```dos
 all-the-icons-install-fonts
@@ -43,7 +43,7 @@ all-the-icons-install-fonts
 
 ### Some Emacs hacking ideas
 
-It is very easy to use Emacs to interactive with Windows¡¯s programs, such as browsing the URL with Chrome, open the PDF file with Acrobat Reader DC, open the current file with default program, launch explorer.exe, etc. Here are some ideas:
+It is very easy to use Emacs to interactive with Windowsâ€™s programs, such as browsing the URL with Chrome, open the PDF file with Acrobat Reader DC, open the current file with default program, launch explorer.exe, etc. Here are some ideas:
 
 ### Browser URL with default browser
 
@@ -96,25 +96,25 @@ M-x wsl/open-in-default-program
 M-x wsl/reveal-in-explorer
 ```
 
-## dired(directory editor)Ê¹ÓÃ
+## dired(directory editor)ä½¿ç”¨
 
-spc o p ´ò¿ªÎÄ¼şÁĞ±íÔÚ²à±ßÀ¸
+spc o p æ‰“å¼€æ–‡ä»¶åˆ—è¡¨åœ¨ä¾§è¾¹æ 
 
-ÔÚÎÄ¼şÄ¿Â¼ÉÏä¯ÀÀÎÄ¼şÊ±£º
-shift-9 ¿ÉÒÔÇĞ»»Ä¿Â¼ÑùÊ½
-M ¿ÉÒÔ¸Ä±äÎÄ¼şµÄÊôĞÔ
-O ¿ÉÒÔ¸Ä±äÎÄ¼şËùÓĞÕß
-/ Ñ¡ÔñÄ¿Â¼
-T ·´ÏòÑ¡Ôñ
-U Ñ¡ÔñËùÓĞµÄÎÄ¼ş
-m Ñ¡Ôñµ¥¸öÎÄ¼ş
-u ³·ÏúËùÓĞÑ¡Ôñ
+åœ¨æ–‡ä»¶ç›®å½•ä¸Šæµè§ˆæ–‡ä»¶æ—¶ï¼š
+shift-9 å¯ä»¥åˆ‡æ¢ç›®å½•æ ·å¼
+M å¯ä»¥æ”¹å˜æ–‡ä»¶çš„å±æ€§
+O å¯ä»¥æ”¹å˜æ–‡ä»¶æ‰€æœ‰è€…
+/ é€‰æ‹©ç›®å½•
+T åå‘é€‰æ‹©
+U é€‰æ‹©æ‰€æœ‰çš„æ–‡ä»¶
+m é€‰æ‹©å•ä¸ªæ–‡ä»¶
+u æ’¤é”€æ‰€æœ‰é€‰æ‹©
 
-ctrl-w v·Ö¸îÆÁÄ»
-ctrl-w wÔÚÆÁÄ»Ö®¼äÇĞ»»
-C ¿ÉÒÔ¸´ÖÆÎÄ¼ş
-x É¾³ıÎÄ¼ş
-R ÒÆ¶¯ÎÄ¼ş
+ctrl-w våˆ†å‰²å±å¹•
+ctrl-w wåœ¨å±å¹•ä¹‹é—´åˆ‡æ¢
+C å¯ä»¥å¤åˆ¶æ–‡ä»¶
+x åˆ é™¤æ–‡ä»¶
+R ç§»åŠ¨æ–‡ä»¶
 
-£¨ÉèÖÃdired-dwim-target Îª true£©
+ï¼ˆè®¾ç½®dired-dwim-target ä¸º trueï¼‰
 spc o -
